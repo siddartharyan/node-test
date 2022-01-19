@@ -11,7 +11,8 @@ app.get("/check/api",(req,res)=>{
 
 app.get("/check/ip",(req,res)=>{
     const ip=requestIp.getClientIp(req)
-    res.json({"ip_ip":ip})
+    console.log(`ip address: ${ip}`)
+    res.send(ip)
 })
 
 app.listen(process.env.PORT || 8081,console.log('server started'))
