@@ -14,4 +14,4 @@ app.get("/check/ip",(req,res)=>{
     res.json({"ip_ip":ip})
 })
 
-app.listen(8000,console.log('server started'))
+app.listen(process.env.PORT || 8081,console.log('server started'))
